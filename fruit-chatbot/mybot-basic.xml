@@ -1,0 +1,150 @@
+<aiml version="1.0.1" encoding="UTF-8">
+
+<!-- Greetings and Politeness -->
+<category> <pattern> HELLO </pattern>
+  <template>Hello! How are you?</template> </category>
+
+<category> <pattern> HELLO * </pattern>
+  <template><srai>HELLO</srai></template> </category>
+
+<category> <pattern> HI </pattern>
+  <template><srai>HELLO</srai></template> </category>
+
+<category> <pattern> HI * </pattern>
+  <template><srai>HELLO</srai></template> </category>
+
+<category> <pattern> HOW ARE YOU </pattern>
+  <template>I'm functioning within normal parameters, thanks for asking.</template></category>
+
+<category><pattern> I AM FINE </pattern>
+  <template>That's good to know. What would you like to discuss about?</template></category>
+
+<category><pattern> BYE </pattern>
+  <template>#0$Bye! Nice talking to you. You take care now.</template></category>
+
+<category><pattern> GOODBYE </pattern>
+  <template><srai>BYE</srai></template></category>
+
+<category><pattern> LEAVE </pattern>
+  <template><srai>BYE</srai></template></category>
+
+<category> <pattern> THANKS </pattern>
+  <template>You are welcome.</template></category>
+
+<category> <pattern> THANK YOU </pattern>
+  <template><srai>THANKS</srai></template></category>
+
+<category> <pattern> CHEERS </pattern>
+  <template>Sure mate.</template></category>
+
+<category> <pattern> CHEERS * </pattern>
+  <template>Sure mate.</template></category>
+
+
+<category> <pattern> WHAT CAN YOU DO </pattern>
+   <template>I am a chatbot about the topic of Fruits! I will answer questions about fruits and I can also determine what fruit is in an image if you send me an image! Just enter "upload image" and select an image for me to classify. If you enter 'speak now' i can hear your voice! Thank you!</template></category>
+
+  <!-- Voice Recognition -->
+<category>
+    <pattern>SPEAK NOW</pattern>
+    <template>
+        #SPEAK#
+    </template>
+</category>
+
+
+<!-- task b -->
+<category>
+    <pattern>I KNOW THAT * IS A FRUIT</pattern>
+    <template>#31$Fruit(<star/>)</template>
+</category>
+
+<category>
+    <pattern>I KNOW THAT * IS FRUIT</pattern>
+    <template>#31$Fruit(<star/>)</template>
+</category>
+
+<category>
+    <pattern>CHECK THAT * IS A FRUIT</pattern>
+    <template>#32$Fruit(<star/>)</template>
+</category>
+
+<category>
+    <pattern>CHECK THAT * IS FRUIT</pattern>
+    <template>#32$Fruit(<star/>)</template>
+</category>
+
+<category>
+    <pattern>IS * EDIBLE</pattern>
+    <template>#31$Edible(<star/>)</template>
+</category>
+
+
+
+
+<!-- Task c - Image Classification enter "upload image" -->
+
+<category>
+    <pattern>UPLOAD IMAGE</pattern>
+    <template>
+        #UPLOAD#
+    </template>
+</category>
+
+
+
+<!-- Task a - Fruit Questions -->
+  
+<category> <pattern> WHAT IS YOUR FAVOURITE FRUIT </pattern>
+  <template>All fruits are great. But my favourite is Watermelon, but I also do love Strawberries</template></category>
+
+<category> <pattern> WHAT FRUIT HAS THE MOST VITAMIN C </pattern>
+  <template>Kakadu Plums have the highest known concentration of vitamin C of any food. Containing up to 2,907 mg per 100 grams.</template></category>
+
+<category> <pattern> WHAT FRUIT HAS THE MOST VITAMIN D </pattern>
+  <template>Oranges are one of the fruits with the most vitamin D. It's known to be one of the best sources of vitamin D! One cup of orange juice gives around 100 IU of vitamin D which is ideal for daily consumption!  </template></category>
+
+<category> <pattern> WHAT IS THE MOST POPULAR FRUIT </pattern>
+  <template>Bananas are the most popular fruit worldwide! Over 100 billion bananas are consumed worldwide each year.</template></category>
+
+<category> <pattern> IS THERE SUGAR IN FRUIT </pattern>
+  <template>Fruit does contain natural sugar. But it is much less unhealthy than sweetened foods.</template></category>
+
+<category> <pattern> HEALTH BENEFITS OF STRAWBERRIES </pattern>
+  <template>Strawberries are great for vitamin C and supporting your immune system. With these benefits in mind, it may help lowering changes of becoming sick when you're around germs. 🍓</template></category>
+
+<category> <pattern> HEALTH BENEFITS OF BANANAS </pattern>
+  <template>Bananas have many health benefits, and I'll list a few too you! Bananas are great for increased fiber intake, heart health, digestive system, energy, and promoting muscle function. 🌙</template></category>
+
+<category> <pattern> HEALTH BENEFITS OF GRAPES </pattern>
+  <template>Grapes benefit your heart health, eye health, improve your memory, attention and mood, and also can support bone health! 🍇</template></category>
+
+<category> <pattern> HEALTH BENEFITS OF APPLES </pattern>
+  <template>Apples aren't rich in vitamins, but they are great sources of fibers and antioxidants. They have benefits such as hearth health, and potentially lower risks of cancer. 🍎</template></category>
+
+<category> <pattern> HEALTH BENEFITS OF WATERMELON </pattern>
+  <template>Watermelons have a high water content and also amino acids. Watermelon is also high in potassium which is great for stopping cramps after exercise! 🍉</template></category>
+
+<category> <pattern> HEALTH BENEFITS OF ORANGES </pattern>
+  <template>Oranges are rich in vitamin C which has antioxidant properties and can help protect cells from damage. Oranges also boost your immune system! 🍊</template></category>
+
+<category> <pattern> COOKING WITH FRUITS </pattern>
+  <template>Fruits can be used in cooking for a lot of different recipes. Some examples are Fruit Salsas, Fruit Salads, Fruit in Baking, and Grilled/Roasted Fruits! Ask me about them.</template></category>
+
+<category> <pattern> RECIPE FOR FRUIT SALSA </pattern>
+  <template>Combine diced fruits like mango, pineapple, or peach with ingredients like onion, cilantro, lime juice, and jalapeño for a sweet and spicy salsa. These are great with grilled fish, chicken, or as a dip. </template></category>
+
+<category> <pattern> RECIPE FOR FRUIT SALAD </pattern>
+  <template> Add slices of apple, pear, orange, or strawberries to green salads for a burst of sweetness. Fruits like avocado and grapefruit also pair well with bitter greens. </template></category>
+
+<category> <pattern> WHAT ARE RED COLOURED FRUITS </pattern>
+  <template> Apples, Strawberries, Cherries, Raspberries, Tomato, Pomegranate, and much more! </template></category>
+
+
+
+
+<!-- Default reaction -->
+<category><pattern> * </pattern>
+  <template>#99$<star index="1"/></template></category>
+
+</aiml>
